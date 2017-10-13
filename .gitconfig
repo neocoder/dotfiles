@@ -1,7 +1,7 @@
 [alias]
 	# View the SHA, description, and history graph of the latest 20 commits
-	ll = log --pretty=oneline -n 20 --graph
-	l = log -n 10 --oneline
+	ll = log --pretty='format:%C(auto) %h %an %d %s' -n 20
+	l = log --pretty='format:%C(auto) %h %an %d %s' -n 10
 	# View the current working tree status using the short format
 	s = status -s
 	# Show the diff between the latest commit and the current state
@@ -28,7 +28,7 @@
 	reb = "!r() { git rebase -i HEAD~$1; }; r"
 	
 	#checkout PR
-	pr = "!pr() { git co dev; git branch -D $2; git fetch upstream pull/$1/head:$2; }; pr"
+	pr = "!pr() { git co dev; git branch -D $2; git fetch upstream pull/$1/head:$2; git checkout $2; }; pr"
 
 [apply]
 	# Detect whitespace errors when applying a patch

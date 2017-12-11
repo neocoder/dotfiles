@@ -15,3 +15,6 @@ Thumbs.db
 
 # extra should not be in the public repo
 .extra
+
+# VSCode project meta
+.vscode

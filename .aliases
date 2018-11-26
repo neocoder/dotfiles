@@ -151,3 +151,6 @@ alias reload="exec ${SHELL} -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# clear buffer in iterm2
+alias clsiterm2="echo -ne '\033]50;ClearScrollback\a'"
